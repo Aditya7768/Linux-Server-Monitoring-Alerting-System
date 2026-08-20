@@ -1,7 +1,6 @@
 # Server Monitoring With Email Alert
 
 Two ways to monitor a server and get emailed when something goes wrong,
-inspired by [LasVegasCoder/Server-Monitoring-With-Email-Alert](https://github.com/LasVegasCoder/Server-Monitoring-With-Email-Alert).
 
 - **`monitrc`** — a config file for [Monit](https://mmonit.com/monit/), a
   lightweight Linux daemon. Same approach as the original repo. Best if
