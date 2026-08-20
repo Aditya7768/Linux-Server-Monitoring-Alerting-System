@@ -1,0 +1,46 @@
+# -----------------------------------------------------------------------
+# Server Monitoring With Email Alert - configuration
+# -----------------------------------------------------------------------
+
+# How often to check, in seconds (only used with --daemon)
+check_interval_seconds: 60
+
+email:
+  from: "monitor@yourdomain.com"
+  to:
+    - "you@yourdomain.com"
+  smtp_host: "smtp.gmail.com"
+  smtp_port: 587
+  use_tls: true
+  use_ssl: false
+  username: "your_smtp_username@gmail.com"
+  password: "your_app_password_here"   # use an app password, not your real password
+
+thresholds:
+  cpu_percent: 85        # alert if CPU usage exceeds this
+  memory_percent: 85     # alert if RAM usage exceeds this
+  swap_percent: 50       # alert if swap usage exceeds this
+  load_per_core: 2.0     # alert if 5-min load average per core exceeds this
+  disk_percent: 90       # alert if disk usage exceeds this
+
+# Mount points / drives to watch
+disks:
+  - "/"
+  # - "/var"
+  # - "C:\\"   # Windows example
+
+# Process names to make sure are running (substring match, case-insensitive)
+processes:
+  - "mysqld"
+  - "apache2"
+  # - "nginx"
+  # - "sshd"
+
+# Websites / HTTP endpoints to check
+websites:
+  - url: "https://example.com"
+    expected_status: 200
+    timeout: 10
+  # - url: "https://example.com/health"
+  #   expected_status: 200
+  #   timeout: 5
