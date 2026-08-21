@@ -16,7 +16,7 @@ Pick whichever fits your setup — they're independent, you don't need both.
 
 ## Option A: Monit (`monitrc`)
 
-1. Install monit:
+1. Install monit
    ```bash
    sudo apt install monit      # Debian/Ubuntu
    sudo yum install monit      # RHEL/CentOS
